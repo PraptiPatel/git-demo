@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: praptipatelgitdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: praptipatelgitdemo
+  template:
+    metadata:
+      labels:
+        app: praptipatelgitdemo 
+    spec:
+      containers:
+        - name: praptipatelgitdemo 
+          image: crteam01.azurecr.io/praptipatelgitdemo
+          ports:
+          - containerPort: 8080
